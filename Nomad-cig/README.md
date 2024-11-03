@@ -51,4 +51,4 @@ Under evidence
 tobacco_smell = 'Smells like tobacco',
 ```
 
-## When putting into shops, add this into the config.lua of qb-shops (change the # to whichever is next for you)
+## When putting into shops, add this into the config.lua of shops (change the # to whichever is next for you)
