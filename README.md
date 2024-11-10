@@ -19,7 +19,7 @@
     weight = 500,
     client = {
          event = 'Nomad-cig:client:UseCigPack',
-         image = 'sikharice'
+         image = 'sikharice.png'
     },
 	description = "Shikar ice ",
 	consume=0.01,
