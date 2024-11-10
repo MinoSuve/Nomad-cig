@@ -14,7 +14,7 @@
 
 ## Insert into ox_inventory:data:items.lua:
 ```
-['sikharice pack'] = { -- do not change the name of item 
+['sikharicepack'] = { -- do not change the name of item 
     label = 'sikharice',
     weight = 500,
     client = {
