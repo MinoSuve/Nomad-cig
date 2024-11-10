@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 -- Cigarette Pack Damage
 RegisterNetEvent('Nomad-cig:server:RemoveCigarette', function()
     local playerId = source
-    local itemName = 'sikharice pack'
+    local itemName = 'sikharicepack'
     local inventory = exports.ox_inventory:Search(playerId, 1, itemName)
     if inventory[1] and inventory[1].metadata.durability then
         -- Get the current durability of the item
