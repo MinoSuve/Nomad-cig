@@ -70,7 +70,6 @@ end)
 RegisterNetEvent('Nomad-cig:client:UseCigarette')
 AddEventHandler('Nomad-cig:client:UseCigarette', function()
     if Config.Progress == "ox" then
-        {
             if lib.progressBar({
                     duration = Config.LightCigTime * 1000,
                     label = 'Lighting cigarette...',
@@ -106,7 +105,6 @@ AddEventHandler('Nomad-cig:client:UseCigarette', function()
                     type = 'error'
                 })
             end
-        }
     else
         QBCore.Functions.Progressbar("smoke_joint", "Lighting cigarette...", Config.LightCigTime * 1000, false, true, {
             disableMovement = false,
