@@ -9,7 +9,7 @@ RegisterNetEvent('Nomad-cig:server:RemoveCigarette', function()
         local currentDurability = inventory[1].metadata.durability
         -- Simulate consumption by reducing durability (for example, reduce by 10%)
         local newDurability = currentDurability - 5
-        if newDurability < 5 then
+        if newDurability <5 then
             newDurability = 0
             -- Optionally remove the item if its durability reaches zero
             exports.ox_inventory:RemoveItem(playerId, itemName, 1)
