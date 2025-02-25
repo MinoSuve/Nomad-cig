@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 -- Cigarette Pack Damage
 RegisterNetEvent('Nomad-cig:server:RemoveCigarette', function()
     local playerId = source
-    local itemName = 'sikharicepack'
+    local itemName = 'sikharice'
     local inventory = exports.ox_inventory:Search(playerId, 1, itemName)
     if inventory[1] and inventory[1].metadata.durability then
         -- Get the current durability of the item
@@ -64,6 +64,7 @@ QBCore.Commands.Add("addstress", "Add stress to a player (Admin Only)", {{name =
             if newStress > 100 then newStress = 100 end -- Cap stress at 100
 
             -- Set the new stress level in the player's metadata
+            Player.Functions.SetMetaData('stress', newStress)
             TriggerClientEvent('hud:client:UpdateStress', src, newStress)
 
             -- Notify the player
@@ -73,7 +74,6 @@ QBCore.Commands.Add("addstress", "Add stress to a player (Admin Only)", {{name =
                 type = 'error', -- Types: 'success', 'error', 'info', 'warning'
                 duration = 2000 -- Duration in milliseconds
             })
-            print("Added " .. stressAmount .. " stress to player " .. src)
         end
     else
         -- Notify player if command usage is incorrect

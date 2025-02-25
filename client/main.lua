@@ -95,7 +95,8 @@ AddEventHandler('Nomad-cig:client:UseCigarette', function()
                 TriggerServerEvent('Nomad-cig:server:removecig')--remove cig 
                 for i = 1, 2, 1 do -- You can edit 5 for amount you want
                         Wait(1500) -- Wait 1.5 seconds to exec event.
-                        TriggerServerEvent('hud:server:RelieveStress', math.random(Config.MinStress, Config.MaxStress)) -- Remove stress.
+                        local stress = math.random(Config.MinStress, Config.MaxStress)
+                        TriggerServerEvent('hud:server:RelieveStress',stress) -- Remove stress.
                     end
                     TriggerEvent("evidence:client:SetStatus", "tobaccosmell", 300)
             else 
